@@ -37,15 +37,31 @@ para reproduzir a rota ótima da parte 1, com o mesmo custo.
 ## Estrutura
 
 ```
-src/maze_navigator/
-├── maze_navigator/
-│   ├── grid.py        # grafo do grid: BFS, A*, conversão rota -> comandos, render ASCII (sem ROS)
-│   ├── explorer.py    # exploração por fronteira e construção do mapa (sem ROS)
-│   ├── ros_client.py  # nó ROS 2: serviços /move_command, /get_map, /reset e tópico de sensores
-│   ├── parte1.py      # executável da parte 1
-│   └── parte2.py      # executável da parte 2
-└── test/test_algoritmos.py  # testes com um simulador falso (rodam sem ROS)
+ponderada-m8-labirinto/
+├── README.md
+├── videos/                     # demonstração em vídeo
+│   ├── parte1.webm             # parte 1: navegação com mapa
+│   └── parte2.webm             # parte 2: mapeamento do labirinto
+└── src/
+    ├── culling_games/          # simulador (clonado à parte, não versionado)
+    └── maze_navigator/         # pacote ROS 2 desta solução
+        ├── package.xml
+        ├── setup.py
+        ├── setup.cfg
+        ├── resource/maze_navigator
+        ├── maze_navigator/
+        │   ├── grid.py         # grafo do grid: BFS, A*, conversão rota -> comandos, render ASCII (sem ROS)
+        │   ├── explorer.py     # exploração por fronteira e construção do mapa (sem ROS)
+        │   ├── ros_client.py   # nó ROS 2: serviços /move_command, /get_map, /reset e tópico de sensores
+        │   ├── parte1.py       # executável da parte 1
+        │   └── parte2.py       # executável da parte 2
+        └── test/
+            └── test_algoritmos.py  # testes com um simulador falso (rodam sem ROS)
 ```
+
+Ao rodar, a parte 2 gera `mapa_construido.csv` na pasta onde foi executada
+(não versionado). O `colcon build` cria `build/`, `install/` e `log/`, que
+também ficam fora do repositório.
 
 Os algoritmos (`grid.py`, `explorer.py`) não dependem do ROS. O robô entra
 neles por uma interface mínima, `move(direction) -> bool` e
