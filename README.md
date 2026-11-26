@@ -19,9 +19,9 @@ O robô recebe o mapa completo do simulador e calcula a rota ótima até o alvo
 com A\*. Em seguida, percorre essa rota e chega ao alvo com o menor número de
 movimentos possível.
 
-<!-- ARRASTE AQUI O parte1.webm (editor do GitHub) -->
+[parte1.webm](https://github.com/user-attachments/assets/e2a7564d-fe1a-4e1f-bd57-ef8dc8835404)
 
-🔗 [Assistir ao vídeo da parte 1 no Google Drive](LINK_DRIVE_PARTE1)
+🔗 [Assistir ao vídeo da parte 1](https://drive.google.com/file/d/14_68igpyhupx-Zc6F4c79RP-P8hf_I00/view?usp=drive_link)
 
 ### Parte 2: mapeamento do labirinto
 
@@ -30,9 +30,9 @@ construindo o mapa durante a exploração. No fim, planeja a rota usando apenas
 o mapa que construiu e a executa até o alvo. Isso comprova que o mapa basta
 para reproduzir a rota ótima da parte 1, com o mesmo custo.
 
-<!-- ARRASTE AQUI O parte2.webm (editor do GitHub) -->
+[parte2.webm](https://github.com/user-attachments/assets/d3226d7e-1b0e-48d0-86c2-d50c1b5a82ea)
 
-🔗 [Assistir ao vídeo da parte 2 no Google Drive](LINK_DRIVE_PARTE2)
+🔗 [Assistir ao vídeo da parte 2](https://drive.google.com/file/d/1rCLa3eApXSAbJt-INRna1vpsDJJMAhdw/view?usp=drive_link)
 
 ## Estrutura
 
