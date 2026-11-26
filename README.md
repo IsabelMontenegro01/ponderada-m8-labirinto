@@ -28,7 +28,9 @@ neles por uma interface mínima, `move(direction) -> bool` e
 
 ## Como executar
 
-Pré-requisitos: ROS 2 (Humble/Jazzy) e `pygame` (`pip install pygame`).
+Pré-requisitos: ROS 2 (Humble/Jazzy) e `pygame` (no Ubuntu: `sudo apt install python3-pygame`; em outros sistemas, `pip install pygame`).
+
+> **Atenção:** o caminho da pasta do workspace não pode ter espaços nem acentos (ex.: `~/Área de trabalho`), senão o `colcon build` do `cg_interfaces` falha. Use, por exemplo, `~/ponderada-m8-labirinto`.
 
 ```bash
 # 1. clonar este repositório e o simulador dentro de src/
@@ -64,6 +66,7 @@ Opções úteis:
 - `parte1 --delay 0.1`: deixa o movimento mais lento para visualizar (padrão 0.05 s).
 - `parte1 --no-reset`: parte da posição atual em vez de reiniciar.
 - `parte2 --delay 0.02`: desacelera a exploração (padrão: sem pausa).
+- `parte2 --replay-delay 0.1`: velocidade da rota final, depois da exploração (padrão 0.05 s).
 - `parte2 --output meu_mapa.csv`: arquivo onde o mapa construído é salvo (padrão `mapa_construido.csv`).
 
 Testes (não precisam de ROS):
