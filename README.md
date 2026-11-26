@@ -8,6 +8,32 @@ Solução das duas partes da ponderada usando o simulador
 | 1 — navegação com mapa | `ros2 run maze_navigator parte1` | Lê o mapa (`/get_map`), calcula a rota ótima com **A\*** e conduz o robô até o alvo |
 | 2 — mapeamento | `ros2 run maze_navigator parte2` | Explora o labirinto **sem o mapa**, só com sensores, constrói o mapa, salva em CSV e comprova que ele reproduz a rota da parte 1 |
 
+## Demonstração
+
+Os vídeos foram gravados no simulador real com o mapa `1.csv`
+(`ros2 run cg maze --map 1.csv`).
+
+### Parte 1: navegação com mapa
+
+O robô recebe o mapa completo do simulador e calcula a rota ótima até o alvo
+com A\*. Em seguida, percorre essa rota e chega ao alvo com o menor número de
+movimentos possível.
+
+<!-- ARRASTE AQUI O parte1.webm (editor do GitHub) -->
+
+🔗 [Assistir ao vídeo da parte 1 no Google Drive](LINK_DRIVE_PARTE1)
+
+### Parte 2: mapeamento do labirinto
+
+O robô começa sem conhecer o mapa e explora o labirinto usando só os sensores,
+construindo o mapa durante a exploração. No fim, planeja a rota usando apenas
+o mapa que construiu e a executa até o alvo. Isso comprova que o mapa basta
+para reproduzir a rota ótima da parte 1, com o mesmo custo.
+
+<!-- ARRASTE AQUI O parte2.webm (editor do GitHub) -->
+
+🔗 [Assistir ao vídeo da parte 2 no Google Drive](LINK_DRIVE_PARTE2)
+
 ## Estrutura
 
 ```
@@ -48,7 +74,7 @@ Terminal 1, o simulador:
 ```bash
 source install/setup.bash
 ros2 run cg maze                 # mapa aleatório
-ros2 run cg maze -- --map 1.csv  # ou um mapa específico
+ros2 run cg maze --map 1.csv     # ou um mapa específico
 ```
 
 Terminal 2, a solução:
