@@ -4,7 +4,7 @@
   <name>maze_navigator</name>
   <version>1.0.0</version>
   <description>Navegação autônoma no labirinto do culling_games: parte 1 (A* com mapa) e parte 2 (mapeamento por exploração de fronteira).</description>
-  <maintainer email="isabel@example.com">Isabel Montenegro</maintainer>
+  <maintainer email="isabel.ruela@sou.inteli.edu.br">Isabel Montenegro</maintainer>
   <license>MIT</license>
 
   <buildtool_depend>ament_python</buildtool_depend>

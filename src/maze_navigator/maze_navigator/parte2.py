@@ -92,6 +92,7 @@ def main(args=None) -> int:
         log.info(f'Rotas idênticas célula a célula: {same_path}')
 
         # ------------------------------------- 5. executa a rota planejada
+        client.step_delay = parsed.replay_delay
         ok = execute_route(client, moves)
         verified = (ok and same_target and not mismatches
                     and plan.cost == opt.cost)

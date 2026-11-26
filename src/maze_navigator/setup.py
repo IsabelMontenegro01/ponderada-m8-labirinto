@@ -14,7 +14,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='Isabel Montenegro',
-    maintainer_email='isabel@example.com',
+    maintainer_email='isabel.ruela@sou.inteli.edu.br',
     description='Navegação autônoma no labirinto do culling_games',
     license='MIT',
     tests_require=['pytest'],
